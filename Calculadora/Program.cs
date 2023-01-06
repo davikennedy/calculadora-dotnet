@@ -6,7 +6,7 @@ namespace Calculadora
     {
         static void Main(string[] args)
         {
-            Divisao();
+            Multiplicacao();
         }
 
         static void Soma() 
@@ -50,6 +50,22 @@ namespace Calculadora
 
             float resultado = valor1 / valor2;
             Console.WriteLine($"\nO resultado da divisão é {resultado}");
+            Console.ReadKey();
+        }
+
+        static void Multiplicacao()
+        {
+            Console.Clear();
+            
+            Console.Write("Primeiro valor: ");
+            float valor1 = float.Parse(Console.ReadLine());
+
+            Console.Write("Segundo valor: ");
+            float valor2 = float.Parse(Console.ReadLine());
+
+            float resultado = valor1 * valor2;
+
+            Console.WriteLine($"\nO resultado da multiplicação é {resultado}");
             Console.ReadKey();
         }
     }
