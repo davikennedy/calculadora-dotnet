@@ -18,7 +18,8 @@ namespace Calculadora
                 "1 - Soma\n" +
                 "2 - Subtração\n" +
                 "3 - Divisão\n" +
-                "4 - Multiplicação"
+                "4 - Multiplicação\n" +
+                "5 - Sair"
             );
 
             Console.Write("\nSelecione uma opção: ");
@@ -26,21 +27,12 @@ namespace Calculadora
 
             switch (opcao)
             {
-                case 1:
-                    Soma();
-                    break;
-                case 2:
-                    Subtracao();
-                    break;
-                case 3:
-                    Divisao();
-                    break;
-                case 4:
-                    Multiplicacao();
-                    break;
-                default:
-                    Menu();
-                    break;
+                case 1: Soma(); break;
+                case 2: Subtracao(); break;
+                case 3: Divisao(); break;
+                case 4: Multiplicacao(); break;
+                case 5: System.Environment.Exit(0); break;
+                default: Menu(); break;
             }
         }
 
@@ -56,6 +48,7 @@ namespace Calculadora
 
             float resultado = valor1 + valor2;
             Console.WriteLine($"\nO resultado da soma é {resultado}");
+            
             Console.ReadKey();
             Menu();
         }
@@ -72,6 +65,7 @@ namespace Calculadora
 
             float resultado = valor1 - valor2;
             Console.WriteLine($"\nO resultado da subtração é {resultado}");
+            
             Console.ReadKey();
             Menu();
         }
@@ -88,6 +82,7 @@ namespace Calculadora
 
             float resultado = valor1 / valor2;
             Console.WriteLine($"\nO resultado da divisão é {resultado}");
+            
             Console.ReadKey();
             Menu();
         }
@@ -103,8 +98,8 @@ namespace Calculadora
             float valor2 = float.Parse(Console.ReadLine());
 
             float resultado = valor1 * valor2;
-
             Console.WriteLine($"\nO resultado da multiplicação é {resultado}");
+            
             Console.ReadKey();
             Menu();
         }
